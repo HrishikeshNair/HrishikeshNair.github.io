@@ -3485,7 +3485,7 @@ Reducing spacing between header and next line
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1em;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .home-header h1 {
@@ -3497,21 +3497,42 @@ Reducing spacing between header and next line
 }
 
 
+/* ============================
+   Page Structure + Footer Sticky
+   ============================ */
+
 html, body {
   height: 100%;
   margin: 0;
+  padding: 0;
 }
 
-.page-wrapper {
+/* Wrapper for homepage layout */
+.home-wrapper {
   display: flex;
-  flex-direction: column;
   min-height: 100vh;
 }
 
-#main {
-  flex: 1;
+/* Sidebar (left) */
+#header {
+  flex-shrink: 0;
+  width: 35%;
 }
 
+/* Main content area (right) */
+#main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Content area inside main */
+#main .container {
+  flex-grow: 1;
+}
+
+/* Footer stays at bottom of #main */
 #footer {
   margin-top: auto;
 }
