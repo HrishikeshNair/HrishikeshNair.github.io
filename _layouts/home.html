@@ -1,67 +1,53 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>{{ page.title | default: "My Site" }}</title>
-
+    <title>{{ page.title | default: "Hrishikesh's Blog" }}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="/assets/css/main.css" />
   </head>
-  <body class="is-preload">
-  
+
+  <body class="is-preload homepage" style="display: flex; flex-direction: column; min-height: 100vh;">
 
     <!-- Header -->
     <header id="header">
-      <div class="inner">
-        <a href="/" class="image avatar"><img src="/images/avatar.jpg" alt="Avatar" /></a>
-        <h1>I'm <strong>Hrishikesh</strong>, and welcome to<br />
-        my blog! I may occasionally post any 
-		random thoughts or things I like here.</h1>
-	
-	<!-- Tabs -->
-	
-	
-	<nav id="home-nav">
-	  <ul>
-		<li><a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}active{% endif %}">About</a></li>
-		<li><a href="{{ '/blog/' | relative_url }}" class="{% if page.url == '/blog/' %}active{% endif %}">Blog</a></li>
-		<li><a href="{{ '/contact/' | relative_url }}" class="{% if page.url == '/contact/' %}active{% endif %}">Contact</a></li>
-	  </ul>
-	</nav>
+      <div class="inner home-header">
+        <img src="/images/profile.jpg" alt="Avatar" class="home-avatar" />
+        <h1>I'm <strong>Hrishikesh</strong>, I sometimes post stuff.</h1>
 
-	
+        <!-- Tabs -->
+        <nav id="home-nav">
+          <ul>
+            <li><a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}active{% endif %}">About</a></li>
+            <li><a href="{{ '/blog/' | relative_url }}" class="{% if page.url == '/blog/' %}active{% endif %}">Blog</a></li>
+            <li><a href="{{ '/contact/' | relative_url }}" class="{% if page.url == '/contact/' %}active{% endif %}">Contact</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
     <!-- Main -->
-    <div id="main">
+    <main id="main" style="flex: 1;">
       <div class="container">
         {{ content }}
       </div>
-    </div>
+    </main>
 
     <!-- Footer -->
     <footer id="footer">
       <div class="inner">
-        <ul class="icons">
-          <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-          <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-          <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-          <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-        </ul>
         <ul class="copyright">
-          <li>&copy; Hrishikesh Nair</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+          <li>&copy; Hrishikesh Nair</li>
+          <li>Any bugs are features</li>
         </ul>
       </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/js/jquery.poptrox.min.js"></script>
     <script src="/assets/js/browser.min.js"></script>
     <script src="/assets/js/breakpoints.min.js"></script>
     <script src="/assets/js/util.js"></script>
     <script src="/assets/js/main.js"></script>
-
   </body>
 </html>

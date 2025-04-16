@@ -5,6 +5,7 @@ permalink: /blog/
 ---
 
 <h1>Blog</h1>
+<p class="subheading">Yeah this will probably remain dormant unless I have some kinda epiphany</p>
 
 <ul>
   {% for post in site.posts %}
