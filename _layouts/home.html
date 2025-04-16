@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>{{ page.title | default: "My Site" }}</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body class="is-preload">
+  
+
+    <!-- Header -->
+    <header id="header">
+      <div class="inner">
+        <a href="/" class="image avatar"><img src="/images/avatar.jpg" alt="Avatar" /></a>
+        <h1><strong>I am Strata</strong>, a super simple<br />
+        responsive site template freebie<br />
+        crafted by <a href="http://html5up.net">HTML5 UP</a>.</h1>
+	
+	<!-- Tabs -->
+	
+	
+	<nav id="home-nav">
+	  <ul>
+		<li><a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}active{% endif %}">About</a></li>
+		<li><a href="{{ '/blog/' | relative_url }}" class="{% if page.url == '/blog/' %}active{% endif %}">Blog</a></li>
+		<li><a href="{{ '/contact/' | relative_url }}" class="{% if page.url == '/contact/' %}active{% endif %}">Contact</a></li>
+	  </ul>
+	</nav>
+
+	
+      </div>
+    </header>
+
+    <!-- Main -->
+    <div id="main">
+      <div class="container">
+        {{ content }}
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="inner">
+        <ul class="icons">
+          <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+          <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+          <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+          <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; Hrishikesh Nair</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery.poptrox.min.js"></script>
+    <script src="/assets/js/browser.min.js"></script>
+    <script src="/assets/js/breakpoints.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>{{ page.title | default: "My Site" }}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- ================================
+         Main site CSS (your styles)
+         ================================ -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+
+    <!-- ================================
+         Font Awesome 6 (for X icon, etc.)
+         ================================ -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  </head>
+  <body class="is-preload">
+
+    <!-- ================================
+         Top Banner (Strata background only)
+         Appears on all non-home pages
+         ================================ -->
+    <section id="banner"></section>
+
+    <!-- ================================
+         Top Navigation Tabs
+         ================================ -->
+    <nav id="main-nav">
+      <ul>
+        <li><a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a></li>
+        <li><a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/About/' %}active{% endif %}">About</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}" class="{% if page.url == '/Blog/' %}active{% endif %}">Blog</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}" class="{% if page.url == '/Contact/' %}active{% endif %}">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- ================================
+         Main Page Content Area
+         ================================ -->
+    <div id="main">
+      <div class="container">
+        {{ content }}
+      </div>
+    </div>
+
+    <!-- ================================
+         Footer (Centered)
+         ================================ -->
+    <footer id="footer">
+      <div class="inner" style="text-align: center; padding: 2em 1em;">
+        <p style="font-size: 0.9em; color: #aaa;">
+          &copy; Hrishikesh Nair | Design: <a href="http://html5up.net">HTML5 UP</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- ================================
+         Scripts
+         ================================ -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery.poptrox.min.js"></script>
+    <script src="/assets/js/browser.min.js"></script>
+    <script src="/assets/js/breakpoints.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+  </body>
+</html>
