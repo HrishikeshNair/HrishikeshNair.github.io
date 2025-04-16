@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Contact
-permalink: /Contact/
+permalink: /contact/
 ---
 
 <h1>Reach out!</h1>

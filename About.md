@@ -1,7 +1,7 @@
 ---
 layout: default
 title: About
-permalink: /About/
+permalink: /about/
 ---
 
 <h1 style="text-align: center;">About Me</h1>
