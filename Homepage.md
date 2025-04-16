@@ -6,4 +6,4 @@ permalink: /
 
 # Welcome
 
-Welcome to my heap of junk. I may add stuff here
+Welcome to my heap of junk. I'll add stuff here when i get the time
