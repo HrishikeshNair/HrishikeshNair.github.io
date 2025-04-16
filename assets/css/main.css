@@ -3536,3 +3536,68 @@ html, body {
 #footer {
   margin-top: auto;
 }
+
+
+/* ============================
+   Mobile Fix for Homepage Layout
+   ============================ */
+
+@media screen and (max-width: 768px) {
+  .home-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  #header {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 4em 2em;
+    align-items: center;
+  }
+
+  #header::before {
+    background-position: center center;
+    background-size: cover;
+    filter: blur(6px);
+  }
+
+  .home-header h1 {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-top: 1em;
+  }
+
+  .home-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  #home-nav {
+    text-align: center;
+    margin-top: 2em;
+  }
+
+  #home-nav li {
+    display: inline-block;
+    margin: 0 0.75em;
+  }
+
+  #main {
+    width: 100%;
+    margin: 0;
+    padding: 2em 1.5em;
+  }
+
+  #footer {
+    position: relative;
+    width: 100%;
+    margin-top: auto;
+  }
+
+  #footer .copyright {
+    font-size: 0.75em;
+    padding: 1em 0;
+  }
+}

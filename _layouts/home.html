@@ -2,23 +2,21 @@
 <html>
   <head>
     <title>{{ page.title | default: "Hrishikesh's Blog" }}</title>
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="/assets/css/main.css" />
   </head>
+
   <body class="is-preload homepage">
+    <div class="home-wrapper"> <!-- ✅ Added wrapper for layout control -->
 
-    <!-- Entire Page Wrapper (Split layout) -->
-    <div class="home-wrapper">
-
-      <!-- Sidebar -->
+      <!-- Header (Sidebar or Top depending on screen size) -->
       <header id="header">
         <div class="inner home-header">
           <img src="/images/profile.jpg" alt="Avatar" class="home-avatar" />
           <h1>I'm <strong>Hrishikesh</strong>, I sometimes post stuff.</h1>
 
-          <!-- Navigation -->
+          <!-- Nav Links -->
           <nav id="home-nav">
             <ul>
               <li><a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}active{% endif %}">About</a></li>
@@ -29,24 +27,24 @@
         </div>
       </header>
 
-      <!-- Main Content Section -->
+      <!-- Main Content -->
       <div id="main">
         <div class="container">
           {{ content }}
         </div>
-
-        <!-- Footer -->
-        <footer id="footer">
-          <div class="inner">
-            <ul class="copyright">
-              <li>&copy; Hrishikesh Nair</li>
-              <li>Any bugs are features</li>
-            </ul>
-          </div>
-        </footer>
       </div>
 
-    </div>
+      <!-- Footer (Sticky) -->
+      <footer id="footer">
+        <div class="inner">
+          <ul class="copyright">
+            <li>&copy; Hrishikesh Nair</li>
+            <li>Any bugs are features</li>
+          </ul>
+        </div>
+      </footer>
+
+    </div> <!-- end .home-wrapper -->
 
     <!-- Scripts -->
     <script src="/assets/js/jquery.min.js"></script>
@@ -55,6 +53,5 @@
     <script src="/assets/js/breakpoints.min.js"></script>
     <script src="/assets/js/util.js"></script>
     <script src="/assets/js/main.js"></script>
-
   </body>
 </html>
