@@ -29,6 +29,7 @@
       <ul>
         <li><a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a></li>
         <li><a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}active{% endif %}">About</a></li>
+		<li><a href="{{ '/photography/' | relative_url }}" class="{% if page.url == '/photography/' %}active{% endif %}">Photography</a></li>
         <li><a href="{{ '/blog/' | relative_url }}" class="{% if page.url == '/blog/' %}active{% endif %}">Blog</a></li>
         <li><a href="{{ '/contact/' | relative_url }}" class="{% if page.url == '/contact/' %}active{% endif %}">Contact</a></li>
       </ul>
@@ -60,5 +61,15 @@
     <script src="/assets/js/breakpoints.min.js"></script>
     <script src="/assets/js/util.js"></script>
     <script src="/assets/js/main.js"></script>
+	
+	
+	<!-- Lightbox Script -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"></script>
+	<script>
+	  const lightbox = GLightbox({ selector: '.lightbox' });
+	</script>
+
+	
   </body>
 </html>

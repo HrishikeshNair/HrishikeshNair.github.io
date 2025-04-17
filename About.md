@@ -8,7 +8,7 @@ permalink: /about/
 
 <div class="about-wrapper">
   <div class="about-image">
-    <img src="/images/profile.jpg" alt="Profile picture of Hrishikesh" />
+    <img src="/images/profile.jpg" alt="Hrishikesh pic" />
   </div>
   <div class="about-text">
     <p>Hello! I’m Hrishikesh Nair.</p>
