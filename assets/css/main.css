@@ -3339,15 +3339,16 @@ Reducing spacing between header and next line
 
 			.about-wrapper {
 			  display: flex;
-			  align-items: center;          /* Vertically center text + image */
-			  gap: 2em;                     /* Space between image and text */
-			  flex-wrap: wrap;              /* Stack on smaller screens */
-			  margin: 2em auto;
+			  flex-direction: row;
+			  justify-content: center;        /* Ensures the whole block is centered */
+			  align-items: center;            /* Aligns text + image vertically */
+			  flex-wrap: wrap;                /* Stack on mobile */
+			  gap: 2em;
 			  max-width: 900px;
-			  padding: 0 2em;               /* Matches contact section padding */
+			  padding: 2em;
+			  margin: 2em auto;
 			  box-sizing: border-box;
-			  justify-content: center;      /* Center both columns horizontally */
-			  text-align: left;             /* Align paragraph text normally on desktop */
+			  text-align: left;
 			}
 
 			.about-wrapper img {
@@ -3356,28 +3357,47 @@ Reducing spacing between header and next line
 			  border-radius: 50%;
 			  object-fit: cover;
 			  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-			  display: block;
+			  flex-shrink: 0;
 			}
 
 			.about-text {
 			  flex: 1;
-			  min-width: 300px;
-			  max-width: 650px;
+			  min-width: 280px;
+			  max-width: 600px;
 			}
 
 			.about-text p {
-			  margin-bottom: 1em;
-			  line-height: 1.6;
 			  font-size: 1.1em;
+			  line-height: 1.6;
 			  color: #444;
+			  margin-bottom: 1em;
 			}
-			
-			.about-img {
-			  width: 150px;
-			  height: 150px;
-			  border-radius: 50%;       /* ✅ Makes it a circle */
-			  object-fit: cover;
+
+			/* ============================
+			   Mobile Fix (Fully Centered)
+			   ============================ */
+			@media screen and (max-width: 768px) {
+			  .about-wrapper {
+				flex-direction: column;
+				text-align: center;
+				padding: 1.5em;
+			  }
+
+			  .about-wrapper img {
+				width: 220px;
+				height: 220px;
+				margin-bottom: 1em;
+			  }
+
+			  .about-text {
+				max-width: 100%;
+			  }
+
+			  .about-text p {
+				font-size: 1em;
+			  }
 			}
+
 
 
 			/* Top banner background for non-home tabs */
@@ -3643,51 +3663,6 @@ body.homepage #main {
     border-color: rgba(255, 255, 255, 0.4) !important;
   }
 
-  /* About Page - Responsive Centered Layout */
-	.about-wrapper {
-	  display: flex;
-	  flex-direction: column;
-	  align-items: center;
-	  text-align: center;
-	  width: 100%;
-	  max-width: 900px;
-	  margin: 2em auto;
-	  padding: 0 1.5em;
-	  box-sizing: border-box;
-	  gap: 2em;
-	}
-
-	.about-wrapper img {
-	  width: 275px;
-	  height: 275px;
-	  border-radius: 50%;
-	  object-fit: cover;
-	  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-	  margin: 0 auto 1em auto;
-	}
-}
-
-/* ============================
-   Mobile Styling
-   ============================ */
-
-	@media screen and (max-width: 768px) {
-	  .about-wrapper {
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-	  }
-
-	  .about-wrapper img {
-		margin-bottom: 1em;
-		width: 200px;
-		height: 200px;
-	  }
-
-	  .about-text p {
-		font-size: 1em;
-	  }
-	}
 
 /* ============================
    Photography Grid Layout
