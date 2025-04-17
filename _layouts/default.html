@@ -1,19 +1,21 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>{{ page.title | default: "My Site" }}</title>
+    <title>{{ page.title | default: "Hrishikesh's Blog" }}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   </head>
 
   <body class="is-preload">
 
-    <!-- Sidebar -->
+    <!-- Banner background for non-home pages -->
     <section id="banner"></section>
 
-    <!-- Navigation -->
+    <!-- Top Navigation -->
     <nav id="main-nav">
       <ul>
         <li><a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a></li>
@@ -24,22 +26,25 @@
     </nav>
 
     <!-- Main Content -->
-    <div id="main">
-      <div class="container">
-        {{ content }}
+    <div class="page-wrapper">
+      <div id="main">
+        <div class="container">
+          {{ content }}
+        </div>
       </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+          <ul class="copyright">
+            <li>&copy; Hrishikesh Nair</li>
+            <li>Any bugs are features</li>
+          </ul>
+        </div>
+      </footer>
     </div>
 
-    <!-- Footer -->
-    <footer id="footer">
-      <div class="inner">
-        <ul class="copyright">
-          <li>&copy; Hrishikesh Nair</li>
-          <li>Any bugs are features</li>
-        </ul>
-      </div>
-    </footer>
-
+    <!-- Scripts -->
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/js/jquery.poptrox.min.js"></script>
     <script src="/assets/js/browser.min.js"></script>
