@@ -3338,63 +3338,60 @@ Reducing spacing between header and next line
    ============================ */
 
 			.about-wrapper {
-				display: flex;
-				flex-direction: column;
-				align-items: center;         /*Horizontally centers all children */
-				justify-content: center;     /*Optional: centers vertically if needed */
-				text-align: center;
-				padding: 0 1.5em;
-				margin: 2em auto;
-				max-width: 100%;             /*Prevents horizontal scroll */
-				box-sizing: border-box;
+			  display: flex;
+			  align-items: center;
+			  justify-content: center;
+			  gap: 3em;
+			  max-width: 900px;
+			  margin: 2em auto;
+			  padding: 1em;
+			  flex-wrap: wrap;
+			  text-align: left;
+			  box-sizing: border-box;
 			}
 
 			.about-wrapper img {
-				width: 275px;
-				height: 275px;
-				border-radius: 50%;
-				object-fit: cover;
-				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-				margin-bottom: 1.5em;
+			  width: 275px;
+			  height: 275px;
+			  border-radius: 50%;
+			  object-fit: cover;
+			  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+			  flex-shrink: 0;
 			}
 
 			.about-text {
-				width: 100%;
-				max-width: 600px;
-				text-align: center;
+			  flex: 1;
+			  min-width: 300px;
+			  max-width: 550px;
 			}
 
 			.about-text p {
-			  font-size: 1.1em;
-			  line-height: 1.6;
-			  color: #444;
 			  margin-bottom: 1em;
+			  line-height: 1.6;
+			  font-size: 1.1em;
+			  color: #444;
 			}
 
-			/* ============================
-			   Mobile Fix (Fully Centered)
-			   ============================ */
+
+/* ============================
+   Mobile Fix (Fully Centered)
+   ============================ */
 			@media screen and (max-width: 768px) {
 			  .about-wrapper {
 				flex-direction: column;
+				align-items: center;
+				justify-content: center;
 				text-align: center;
-				padding: 1.5em;
+				padding: 0 1.5em;
+				margin: 2em auto;
 			  }
 
 			  .about-wrapper img {
-				width: 220px;
-				height: 220px;
-				margin-bottom: 1em;
+				margin-bottom: 1.5em;
 			  }
 
-			  .about-text {
-				max-width: 100%;
-			  }
+			  .
 
-			  .about-text p {
-				font-size: 1em;
-			  }
-			}
 
 
 
