@@ -3640,16 +3640,29 @@ body.homepage #main {
     border-color: rgba(255, 255, 255, 0.4) !important;
   }
 
-  /* About Page adjustments */
-  .about-wrapper {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+/* About Page - Responsive Centered Layout */
+.about-wrapper {
+  display: flex;
+  flex-direction: column;     /* Stack image + text vertically */
+  align-items: center;        /* Center items horizontally */
+  text-align: center;         /* Center text inside paragraphs */
+  gap: 2em;
+  margin-top: 2em;
+  max-width: 900px;
+  margin: 2em auto;
+  padding: 1em;
+}
 
-  .about-wrapper img {
-	margin: 0 auto 1em auto;   /* Centers the image horizontally */
-	display: block;            /* Ensures margin:auto works */
-  }
+/* Profile image styling */
+.about-wrapper img {
+  width: 275px;
+  height: 275px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: block;
+  margin: 0 auto 1em auto;
+  align-self: center;
+}
 }
 
