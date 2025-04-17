@@ -3338,32 +3338,30 @@ Reducing spacing between header and next line
    ============================ */
 
 			.about-wrapper {
-			  display: flex;
-			  flex-direction: row;
-			  justify-content: center;        /* Ensures the whole block is centered */
-			  align-items: center;            /* Aligns text + image vertically */
-			  flex-wrap: wrap;                /* Stack on mobile */
-			  gap: 2em;
-			  max-width: 900px;
-			  padding: 2em;
-			  margin: 2em auto;
-			  box-sizing: border-box;
-			  text-align: left;
+				display: flex;
+				flex-direction: column;
+				align-items: center;         /*Horizontally centers all children */
+				justify-content: center;     /*Optional: centers vertically if needed */
+				text-align: center;
+				padding: 0 1.5em;
+				margin: 2em auto;
+				max-width: 100%;             /*Prevents horizontal scroll */
+				box-sizing: border-box;
 			}
 
 			.about-wrapper img {
-			  width: 275px;
-			  height: 275px;
-			  border-radius: 50%;
-			  object-fit: cover;
-			  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-			  flex-shrink: 0;
+				width: 275px;
+				height: 275px;
+				border-radius: 50%;
+				object-fit: cover;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+				margin-bottom: 1.5em;
 			}
 
 			.about-text {
-			  flex: 1;
-			  min-width: 280px;
-			  max-width: 600px;
+				width: 100%;
+				max-width: 600px;
+				text-align: center;
 			}
 
 			.about-text p {
