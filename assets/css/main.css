@@ -3361,8 +3361,9 @@ Reducing spacing between header and next line
 
 			.about-text {
 			  flex: 1;
-			  min-width: 300px;
+			  min-width: 0;
 			  max-width: 650px;
+			  padding: 0 1em;    /* optional - to add a bit of horizontal padding */
 			}
 
 			.about-text p {
@@ -3375,7 +3376,7 @@ Reducing spacing between header and next line
 			.about-img {
 			  width: 150px;
 			  height: 150px;
-			  border-radius: 50%;       /* ✅ Makes it a circle */
+			  border-radius: 50%;       /*  Makes it a circle */
 			  object-fit: cover;
 			}
 
