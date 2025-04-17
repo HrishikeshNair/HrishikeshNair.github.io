@@ -3633,6 +3633,13 @@ body.homepage #main {
     line-height: 1.5;
   }
 
+  (
+  #footer .copyright,
+  #footer .copyright li {
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+  }
+
   /* About Page adjustments */
   .about-wrapper {
     flex-direction: column;
