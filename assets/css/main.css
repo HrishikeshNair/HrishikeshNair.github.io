@@ -3643,13 +3643,12 @@ body.homepage #main {
 /* About Page - Responsive Centered Layout */
 .about-wrapper {
   display: flex;
-  flex-direction: column;     /* Stack image + text vertically */
-  align-items: center;        /* Center items horizontally */
-  text-align: center;         /* Center text inside paragraphs */
-  gap: 2em;
-  margin-top: 2em;
-  max-width: 900px;
-  margin: 2em auto;
+  flex-direction: column;     /* Stack image and text vertically */
+  align-items: center;        /* Center image and text block horizontally */
+  text-align: center;         /* Center text inside the text block */
+  gap: 2em;                   /* Space between image and text */
+  max-width: 900px;           /* Constrain max width for better readability */
+  margin: 2em auto;           /* Center the wrapper horizontally + spacing from top */
   padding: 1em;
 }
 
