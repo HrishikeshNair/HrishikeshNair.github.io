@@ -3339,16 +3339,16 @@ Reducing spacing between header and next line
 
 			.about-wrapper {
 			  display: flex;
-			  align-items: center;          /* Vertically center text + image */
-			  gap: 2em;                     /* Space between image and text */
-			  flex-wrap: wrap;              /* Stack on smaller screens */
-			  margin: 2em auto;
+			  align-items: center;
+			  justify-content: center; /* 🧠 changed from flex-start to center */
+			  gap: 3em;
+			  margin-top: 2em;
 			  max-width: 900px;
-			  padding: 0 2em;               /* Matches contact section padding */
-			  box-sizing: border-box;
-			  justify-content: center;      /* Center both columns horizontally */
-			  text-align: left;             /* Align paragraph text normally on desktop */
+			  margin: 2em auto;
+			  padding: 1em;
+			  flex-wrap: wrap;
 			}
+
 
 			.about-wrapper img {
 			  width: 275px;
