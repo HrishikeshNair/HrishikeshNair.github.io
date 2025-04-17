@@ -3339,15 +3339,15 @@ Reducing spacing between header and next line
 
 			.about-wrapper {
 			  display: flex;
-			  align-items: center;
-			  justify-content: center;
-			  gap: 3em;
-			  max-width: 900px;
+			  align-items: center;          /* Vertically center text + image */
+			  gap: 2em;                     /* Space between image and text */
+			  flex-wrap: wrap;              /* Stack on smaller screens */
 			  margin: 2em auto;
-			  padding: 1em;
-			  flex-wrap: wrap;
-			  text-align: left;
+			  max-width: 900px;
+			  padding: 0 2em;               /* Matches contact section padding */
 			  box-sizing: border-box;
+			  justify-content: center;      /* Center both columns horizontally */
+			  text-align: left;             /* Align paragraph text normally on desktop */
 			}
 
 			.about-wrapper img {
@@ -3355,14 +3355,14 @@ Reducing spacing between header and next line
 			  height: 275px;
 			  border-radius: 50%;
 			  object-fit: cover;
-			  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-			  flex-shrink: 0;
+			  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+			  display: block;
 			}
 
 			.about-text {
 			  flex: 1;
 			  min-width: 300px;
-			  max-width: 550px;
+			  max-width: 650px;
 			}
 
 			.about-text p {
@@ -3371,28 +3371,13 @@ Reducing spacing between header and next line
 			  font-size: 1.1em;
 			  color: #444;
 			}
-
-
-/* ============================
-   Mobile Fix (Fully Centered)
-   ============================ */
-			@media screen and (max-width: 768px) {
-			  .about-wrapper {
-				flex-direction: column;
-				align-items: center;
-				justify-content: center;
-				text-align: center;
-				padding: 0 1.5em;
-				margin: 2em auto;
-			  }
-
-			  .about-wrapper img {
-				margin-bottom: 1.5em;
-			  }
-
-			  .
-
-
+			
+			.about-img {
+			  width: 150px;
+			  height: 150px;
+			  border-radius: 50%;       /* ✅ Makes it a circle */
+			  object-fit: cover;
+			}
 
 
 			/* Top banner background for non-home tabs */
@@ -3658,6 +3643,40 @@ body.homepage #main {
     border-color: rgba(255, 255, 255, 0.4) !important;
   }
 
+  /* About Page - Responsive Centered Layout */
+	.about-wrapper {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  text-align: center;
+	  width: 100%;
+	  max-width: 900px;
+	  margin: 2em auto;
+	  padding: 0 1.5em;
+	  box-sizing: border-box;
+	  gap: 2em;
+	}
+
+	.about-wrapper img {
+	  width: 275px;
+	  height: 275px;
+	  border-radius: 50%;
+	  object-fit: cover;
+	  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+	  margin: 0 auto 1em auto;
+	}
+}
+
+@media screen and (max-width: 600px) {
+  .about-wrapper img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about-text p {
+    font-size: 1em;
+  }
+}
 
 /* ============================
    Photography Grid Layout
@@ -3794,4 +3813,40 @@ body.homepage #main {
   user-select: none;
 }
 
+/* ============================
+   Mobile Styling
+   ============================ */
+
+@media screen and (max-width: 768px) {
+  .photo-modal {
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5em;
+  }
+
+  .photo-modal .modal-image {
+    max-width: 90vw;
+    max-height: 50vh;
+    margin: 0 0 1em 0;
+  }
+
+  .modal-caption {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .modal-title {
+    font-size: 1.3em;
+  }
+
+  .modal-description {
+    font-size: 0.9em;
+  }
+
+  .modal-nav .prev,
+  .modal-nav .next {
+    font-size: 1.5em;
+    background: none;
+  }
+}
 
