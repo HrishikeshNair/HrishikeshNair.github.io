@@ -3568,10 +3568,11 @@ body.homepage #main {
   .home-wrapper {
     flex-direction: column;
   }
-  
+
+  /* Remove sidebar margin on mobile for homepage */
   body.homepage #main {
-	margin-left: 0 !important;
-	width: 100% !important;
+    margin-left: 0 !important;
+    width: 100% !important;
   }
 
   /* Header adapts for small screen */
@@ -3633,35 +3634,35 @@ body.homepage #main {
     line-height: 1.5;
   }
 
-  (
-  #footer .copyright,
-  #footer .copyright li {
+  /* ✅ Force white footer text + border for non-homepage tabs */
+  body:not(.homepage) #footer .copyright,
+  body:not(.homepage) #footer .copyright li {
     color: #ffffff !important;
     border-color: rgba(255, 255, 255, 0.4) !important;
   }
 
-/* About Page - Responsive Centered Layout */
-.about-wrapper {
-  display: flex;
-  flex-direction: column;     /* Stack image and text vertically */
-  align-items: center;        /* Center image and text block horizontally */
-  text-align: center;         /* Center text inside the text block */
-  gap: 2em;                   /* Space between image and text */
-  max-width: 900px;           /* Constrain max width for better readability */
-  margin: 2em auto;           /* Center the wrapper horizontally + spacing from top */
-  padding: 1em;
+  /* About Page - Responsive Centered Layout */
+  .about-wrapper {
+    display: flex;
+    flex-direction: column;     /* Stack image and text vertically */
+    align-items: center;        /* Center image and text block horizontally */
+    text-align: center;         /* Center text inside the text block */
+    gap: 2em;
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 1em;
+  }
+
+  .about-wrapper img {
+    width: 275px;
+    height: 275px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    display: block;
+    margin: 0 auto 1em auto;
+    align-self: center;
+  }
 }
 
-/* Profile image styling */
-.about-wrapper img {
-  width: 275px;
-  height: 275px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  display: block;
-  margin: 0 auto 1em auto;
-  align-self: center;
-}
-}
 
