@@ -47,7 +47,14 @@ permalink: /photography/
 		  <div class="photo-caption">Evening Sway</div>
 		</div>
 
-
+		<!-- 7 -->
+		<div class="photo-item" data-title="Crisp Formation" data-description="Aarogya Aahara used to be great before it got so crowded :( (Plain dosa gang ftw)<br><i>Pixel 7 Pro, unedited</i>">
+		  <img src="/images/photo7.jpg" alt="Photo 7" />
+		  <div class="photo-caption">Crisp Formation</div>
+		</div>
+		
+		
+		
 </div>
 
 <!-- Lightbox Modal (hidden by default) -->
