@@ -3568,6 +3568,14 @@ body.homepage #main {
   .home-wrapper {
     flex-direction: column;
   }
+  
+	/* Final Mobile Fix for Homepage Layout */
+	@media screen and (max-width: 768px) {
+	  body.homepage #main {
+		margin-left: 0 !important;
+		width: 100% !important;
+	  }
+	}
 
   /* Header adapts for small screen */
   #header {
