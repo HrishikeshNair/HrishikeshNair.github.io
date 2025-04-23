@@ -21,13 +21,13 @@ permalink: /blog/arrival-fallacy/
 <p>You're probably already familiar with this comic on success:</p>
 
 <div class="blog-image">
-  <img src="/images/blog/post1/post1image1.jpg" alt="Comic on success" />
+  <img src="/images/blog/Post1/post1image1.jpg" alt="Comic on success" />
 </div>
 
 <p>Here's my take on how it usually ends:</p>
 
 <div class="blog-image">
-  <img src="/images/blog/post1/post1image2.png" alt="My take on success" />
+  <img src="/images/blog/Post1/post1image2.png" alt="My take on success" />
 </div>
 
 <p>It's something that's built into us humans, the tendency to set our newfound happiness as a baseline for our future — but it's not always a bad thing. It helps us set bigger goals, to dream bigger dreams. Otherwise who knows, we might've still been using carrier pigeons to slide into DMs or receiving the latest episode of <em>Mindhunter</em> (RIP) as a DVD in our mailboxes.</p>
@@ -37,7 +37,7 @@ permalink: /blog/arrival-fallacy/
 <p>Since I started this by talking about a trip, allow me to end it the same way. Here's something I found on IG that I liked and felt appropriate to the situation:</p>
 
 <div class="blog-image">
-  <img src="/images/blog/post1/post1image3.png" alt="Instagram Quote" />
+  <img src="/images/blog/Post1/post1image3.png" alt="Instagram Quote" />
 </div>
 
 <hr style="margin: 3em 0;" />
