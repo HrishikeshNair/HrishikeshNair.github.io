@@ -3878,6 +3878,7 @@ body.homepage #main {
 .blog-search {
   margin: 2em 0 1em;
   text-align: center;
+  width: 100%;
   overflow: visible;
 }
 
