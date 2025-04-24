@@ -3884,12 +3884,13 @@ body.homepage #main {
 
 .search-wrapper {
   display: flex;
-  width: 100%;         /* ← always fill your container */
-  max-width: 400px;     /* ← but never exceed 400px on large screens */
+  width: min(100%, 400px);
   margin: 0 auto;
   position: relative;
   overflow: visible;
+  box-sizing: border-box;
 }
+
 
 .search-wrapper input {
   width: 100%;
