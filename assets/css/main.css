@@ -3971,6 +3971,7 @@ body.homepage #main {
   border-radius: 8px;
   border: 2px solid #ccc;
   font-size: 1em;
+  width: 100%;
   min-width: 0; /* Prevent overflow */
   box-sizing: border-box; /* Ensure padding is included in width */
 }
