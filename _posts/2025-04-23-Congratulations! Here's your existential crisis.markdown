@@ -23,6 +23,7 @@ tags: [psychology, life]
 </div>
 
 
+<br />
 <h1 style="text-align: center;">Congratulations! Here's your existential crisis</h1>
 
 <!-- start -->
