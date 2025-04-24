@@ -42,7 +42,7 @@ permalink: /photography/
 		</div>
 
 		<!-- 6 -->
-		<div class="photo-item" data-title="Evening Sway" data-description="Hanging bridge at golden hour on the Karingode river.<br><i>Pixel 7 Pro, slightly saturated</i>">
+		<div class="photo-item" data-title="Evening Sway" data-description="Hanging bridge at golden hour on the Kariangode river.<br><i>Pixel 7 Pro, slightly saturated</i>">
 		  <img src="/images/photo6.jpg" alt="Photo 6" />
 		  <div class="photo-caption">Evening Sway</div>
 		</div>

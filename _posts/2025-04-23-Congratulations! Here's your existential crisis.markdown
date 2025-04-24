@@ -1,13 +1,33 @@
 ---
 layout: default
 title: "Congratulations! Here's your existential crisis"
-permalink: /blog/arrival-fallacy/
+permalink: /blog/25042301/
+tags: [psychology, life]
 ---
+
+<!-- Back Button (Top Left) -->
+<div style="margin: 2em 0 1em 0;">
+  <a href="{{ '/blog/' | relative_url }}" style="color: #49bf9d; font-size: 1.1em; font-weight: 500; text-decoration: none;">
+    ← Back
+  </a>
+</div>
+
+<!-- Post Metadata -->
+<div class="post-meta">
+  <span>April 23, 2025</span> &nbsp;•&nbsp;
+  <span class="post-tags">
+    {% for tag in page.tags %}
+      <span class="pill post-tag" data-tag="{{ tag }}">{{ tag }}</span>
+    {% endfor %}
+  </span>
+</div>
+
 
 <h1 style="text-align: center;">Congratulations! Here's your existential crisis</h1>
 
-<p>You're finally back from that trip you'd been counting down to for months. Days spent overplanning every single attraction, restaurant, and activity. Now you're home again, suitcase thrown in a corner of your room (pile of laundry in the other corner). You make space for your latest fridge magnet amongst his new neighbors, and take a step back to admire your Picasso of tourist traps. Oddly anticlimactic. You suddenly think, <i>"Huh. Now what?"</i></p>
+<!-- start -->
 
+<p>You're finally back from that trip you'd been counting down to for months. Days spent overplanning every single attraction, restaurant, and activity. Now you're home again, suitcase thrown in a corner of your room (pile of laundry in the other corner). You make space for your latest fridge magnet amongst his new neighbors, and take a step back to admire your Picasso of tourist traps. Oddly anticlimactic. You suddenly think, <i>"Huh. Now what?"</i></p>
 
 <hr style="margin: 2em 0;" />
 
@@ -41,5 +61,13 @@ permalink: /blog/arrival-fallacy/
 </div>
 
 <hr style="margin: 3em 0;" />
-
 <p style="text-align: center;"><i>Fin.</i></p>
+
+<script>
+  document.querySelectorAll(".post-tag").forEach(tag => {
+    tag.addEventListener("click", function () {
+      const value = encodeURIComponent(this.dataset.tag);
+      window.location.href = `/blog/?q=${value}`;
+    });
+  });
+</script>

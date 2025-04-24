@@ -3869,3 +3869,169 @@ body.homepage #main {
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
+
+/* ============================
+   Blog Search
+   ============================ */
+
+.blog-search {
+  margin: 2em 0 1em;
+  text-align: center;
+}
+
+.search-wrapper {
+  display: flex;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.search-wrapper input {
+  width: 100%;
+  padding: 0.75em 2.5em 0.75em 1em;
+  border: 2px solid #ccc;
+  border-radius: 0.35em;
+  font-size: 1em;
+}
+
+.search-wrapper .search-icon {
+  position: absolute;
+  right: 0.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.blog-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.blog-preview {
+  padding: 1.5em 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.blog-preview a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5em;
+}
+
+.blog-title {
+  font-size: 1.25em;
+  margin: 0;
+}
+
+.blog-meta {
+  font-size: 0.85em;
+  color: #999;
+  white-space: nowrap;
+}
+
+.blog-snippet {
+  font-style: italic;
+  color: #aaa !important; /* light gray for subtlety */
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.6;
+}
+
+
+
+/* ============================
+   Blog Page Layout
+   ============================ */
+
+/* Search Bar Full Width */
+.full-width {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.search-wrapper input {
+  flex: 1;
+  padding: 0.75em;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  font-size: 1em;
+}
+
+.search-icon {
+  background: none;
+  border: none;
+  font-size: 1.25em;
+  cursor: pointer;
+  color: #888;
+  margin-left: -2.2em;  /* Position inside input */
+  background-color: transparent;
+}
+
+/* Blog Title and Metadata */
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.blog-title {
+  text-decoration: underline;
+  margin-bottom: 0.2em;
+}
+
+.blog-meta {
+  font-size: 0.85em;
+  color: #888;
+  white-space: nowrap;
+}
+
+/* Blog Snippet Cleanup */
+.blog-snippet {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  color: #555;
+}
+
+/* Tag Pills (Bottom Right of Preview) */
+.tag-pills {
+  text-align: right;
+  margin-top: 0.25em; /* Reduced space below preview */
+}
+
+.pill {
+  display: inline-block;
+  background: #eee;
+  color: #444;
+  font-size: 0.8em;
+  padding: 0.35em 0.75em;
+  margin-left: 0.4em;
+  border-radius: 999px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.pill:hover,
+.pill:focus {
+  background: #49bf9d;
+  color: white;
+}
+
