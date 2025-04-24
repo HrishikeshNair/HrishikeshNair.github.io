@@ -3878,6 +3878,7 @@ body.homepage #main {
 .blog-search {
   margin: 2em 0 1em;
   text-align: center;
+  overflow: visible;
 }
 
 .search-wrapper {
@@ -3885,6 +3886,7 @@ body.homepage #main {
   max-width: 400px;
   margin: 0 auto;
   position: relative;
+  overflow: visible;
 }
 
 .search-wrapper input {
