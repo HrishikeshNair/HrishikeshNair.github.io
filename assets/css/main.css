@@ -3884,7 +3884,8 @@ body.homepage #main {
 
 .search-wrapper {
   display: flex;
-  max-width: 400px;
+  width: 100%;         /* ← always fill your container */
+  max-width: 400px;     /* ← but never exceed 400px on large screens */
   margin: 0 auto;
   position: relative;
   overflow: visible;
@@ -3970,7 +3971,7 @@ body.homepage #main {
 
 .search-wrapper input {
   flex: 1;
-  padding: 0.75em;
+  padding: 0.75em 2.5em 0.75em 1em;
   border-radius: 8px;
   border: 2px solid #ccc;
   font-size: 1em;

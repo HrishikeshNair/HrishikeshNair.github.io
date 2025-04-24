@@ -4,8 +4,8 @@ title: Blog
 permalink: /blog/
 ---
 
-<h1>Blog</h1>
-<p class="subheading">Excuse my infrequent updates, the Shakespeare in me likes his naps</p>
+<h1 style="text-align: center;">Blog</h1>
+<p class="subheading" style="text-align: center;">Excuse my infrequent updates, the Shakespeare in me likes his naps</p>
 
 <!-- Search Bar -->
 <div class="blog-search">
