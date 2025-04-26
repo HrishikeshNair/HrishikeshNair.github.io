@@ -195,7 +195,7 @@ permalink: /photography/
   </div>
 
 </div>
-    modalTitle.textContent  = item.dataset.title || "";
+
 
 <!-- ───────────────  Light-box Modal  ─────────────── -->
 <div id="photo-modal" class="photo-modal">
@@ -250,7 +250,7 @@ permalink: /photography/
 </script>
 
 <!-- ───────────────  Back-to-Top Pill  ─────────────── -->
-<button id="backToTop" title="Back to Top">Back&nbsp;to&nbsp;Top&nbsp;&#8679;</button>
+<button id="backToTop" title="Back to Top">Back&nbsp;to&nbsp;Top</button>
 
 <script>
   /* find the element that actually scrolls (window fallback) */
@@ -277,13 +277,17 @@ permalink: /photography/
 
 <!-- ───────────────  Page-specific Styles  ─────────────── -->
 <style>
-/* back-to-top pill */
+/* Back-to-Top pill */
 #backToTop{
   position:fixed;
   top:20px; left:50%; transform:translateX(-50%);
   z-index:1000;
+
+  /* flex keeps text + chevron vertically centred */
+  display:inline-flex;                 /* ◀︎ changed  */
+  align-items:center;                  /* ◀︎ added    */
+
   padding:8px 22px;
-  display:none;                   /* shown by JS */
   background:rgba(30,30,30,.35);
   backdrop-filter:blur(8px);
   color:#fff; font:15px/1.2 system-ui,sans-serif;
@@ -291,36 +295,38 @@ permalink: /photography/
   cursor:pointer; opacity:.8;
   transition:background .25s, opacity .25s;
 }
-#backToTop:hover{ background:rgba(30,30,30,.55); opacity:1; }
+#backToTop:hover{background:rgba(30,30,30,.55);opacity:1;}
 
-/* centre ← / → arrows over the image */
+#backToTop::after{
+  content:"";
+  display:inline-block;
+  margin-left:.5em;
+  width:.6em; height:.6em;
+  border:2px solid currentColor;
+  border-left:0; border-bottom:0;      /* keep only top & right */
+  transform:rotate(-45deg);
+  /* middle-align inside flex container */
+  flex-shrink:0;                       /* avoid squashing */
+}
+
+
+/* modal nav arrows — centred & lifted a bit */
 .photo-modal .prev,
 .photo-modal .next{
-  position:fixed; top:50%; transform:translateY(-50%);
-  font-size:2.5rem; color:#fff; user-select:none; cursor:pointer;
+  position:fixed;
+  top:45%; transform:translateY(-50%);
+  font-size:2.5rem; color:#fff;
+  user-select:none; cursor:pointer;
   z-index:2000; padding:.3em .6em;
 }
-.photo-modal .prev{ left:12px; }
-.photo-modal .next{ right:12px; }
+.photo-modal .prev{left:12px;}
+.photo-modal .next{right:12px;}
 
+/* mobile tweaks */
 @media(max-width:600px){
-  #backToTop{ font-size:14px; padding:6px 18px; }
+  #backToTop{font-size:14px;padding:6px 18px;}
   .photo-modal .prev,
-  .photo-modal .next{ font-size:3.2rem; }
+  .photo-modal .next{top:48%;font-size:3.2rem;}
 }
 </style>
 
-<style>
-/* move modal navigation arrows a little higher */
-.photo-modal .prev,
-.photo-modal .next{
-  top:45%;                       /* was 50% */
-}
-
-@media(max-width:600px){         /* phones */
-  .photo-modal .prev,
-  .photo-modal .next{
-    top:40%;                     /* even higher on small screens */
-  }
-}
-</style>
