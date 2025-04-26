@@ -309,3 +309,18 @@ permalink: /photography/
   .photo-modal .next{ font-size:3.2rem; }
 }
 </style>
+
+<style>
+/* move modal navigation arrows a little higher */
+.photo-modal .prev,
+.photo-modal .next{
+  top:45%;                       /* was 50% */
+}
+
+@media(max-width:600px){         /* phones */
+  .photo-modal .prev,
+  .photo-modal .next{
+    top:40%;                     /* even higher on small screens */
+  }
+}
+</style>
