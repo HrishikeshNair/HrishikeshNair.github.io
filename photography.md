@@ -4,10 +4,14 @@ title: Photography
 permalink: /photography/
 ---
 
-<h1 style="text-align: center;">Photography</h1>
-<p class="subheading" style="text-align: center;">Mostly taken on my phone, all random and some occasionally interesting. All unedited unless mentioned otherwise. Click on them to find out more.</p>
+<!-- ───────────────  Heading  ─────────────── -->
+<h1 style="text-align:center;">Photography</h1>
+<p class="subheading" style="text-align:center;">
+  Mostly taken on my phone, all random and some occasionally interesting. All
+  unedited unless mentioned otherwise. Click on them to find out more.
+</p>
 
-<!-- Main photo grid -->
+<!-- ───────────────  Photo Grid  ─────────────── -->
 <div class="photo-grid">
 
   <!-- 1 -->
@@ -191,8 +195,9 @@ permalink: /photography/
   </div>
 
 </div>
+    modalTitle.textContent  = item.dataset.title || "";
 
-<!-- Lightbox Modal (hidden by default) -->
+<!-- ───────────────  Light-box Modal  ─────────────── -->
 <div id="photo-modal" class="photo-modal">
   <span class="close-btn">&times;</span>
   <img class="modal-image" src="" alt="Full View" />
@@ -200,179 +205,107 @@ permalink: /photography/
     <h2 class="modal-title"></h2>
     <p class="modal-description"></p>
   </div>
-  <div class="modal-nav">
-    <span class="prev">&#10094;</span>
-    <span class="next">&#10095;</span>
-  </div>
+
+  <!-- navigation arrows -->
+  <span class="prev">&#10094;</span>
+  <span class="next">&#10095;</span>
 </div>
 
-<!-- ===== Lightbox Functionality ===== -->
+<!-- ───────────────  Light-box Script  ─────────────── -->
 <script>
-  const modal      = document.getElementById("photo-modal");
-  const modalImg   = modal.querySelector(".modal-image");
-  const modalTitle = modal.querySelector(".modal-title");
-  const modalDesc  = modal.querySelector(".modal-description");
-  const closeBtn   = modal.querySelector(".close-btn");
-  const prevBtn    = modal.querySelector(".prev");
-  const nextBtn    = modal.querySelector(".next");
-  const photoItems = Array.from(document.querySelectorAll(".photo-item"));
+  const modal       = document.getElementById('photo-modal'),
+        modalImg    = modal.querySelector('.modal-image'),
+        modalTitle  = modal.querySelector('.modal-title'),
+        modalDesc   = modal.querySelector('.modal-description'),
+        closeBtn    = modal.querySelector('.close-btn'),
+        prevBtn     = modal.querySelector('.prev'),
+        nextBtn     = modal.querySelector('.next'),
+        items       = Array.from(document.querySelectorAll('.photo-item'));
 
-  let currentIndex = 0;
+  let current = 0;
 
-  function openModal(index) {
-    const item = photoItems[index];
-    modal.classList.add("active");
-    modalImg.src            = item.querySelector("img").src;
-    modalTitle.textContent  = item.dataset.title || "";
-    modalDesc.innerHTML     = item.dataset.description || "";
-    currentIndex            = index;
+  function open(i){
+    const it = items[i];
+    modal.classList.add('active');
+    modalImg.src           = it.querySelector('img').src;
+    modalTitle.textContent = it.dataset.title   || '';
+    modalDesc.innerHTML    = it.dataset.description || '';
+    current = i;
   }
+  function close(){ modal.classList.remove('active'); }
+  function next(){ open((current+1)%items.length);   }
+  function prev(){ open((current-1+items.length)%items.length); }
 
-  function closeModal() {
-    modal.classList.remove("active");
-  }
+  items.forEach((it,i)=> it.addEventListener('click', ()=>open(i)));
+  closeBtn.addEventListener('click', close);
+  nextBtn .addEventListener('click', next);
+  prevBtn .addEventListener('click', prev);
 
-  function showNext() {
-    currentIndex = (currentIndex + 1) % photoItems.length;
-    openModal(currentIndex);
-  }
-
-  function showPrev() {
-    currentIndex = (currentIndex - 1 + photoItems.length) % photoItems.length;
-    openModal(currentIndex);
-  }
-
-  photoItems.forEach((item, index) =>
-    item.addEventListener("click", () => openModal(index))
-  );
-
-  closeBtn.addEventListener("click", closeModal);
-  nextBtn .addEventListener("click", showNext);
-  prevBtn .addEventListener("click", showPrev);
-
-  window.addEventListener("keydown", (e) => {
-    if (!modal.classList.contains("active")) return;
-    if (e.key === "ArrowRight") showNext();
-    if (e.key === "ArrowLeft")  showPrev();
-    if (e.key === "Escape")     closeModal();
+  window.addEventListener('keydown', e=>{
+    if(!modal.classList.contains('active')) return;
+    if(e.key==='ArrowRight') next();
+    if(e.key==='ArrowLeft')  prev();
+    if(e.key==='Escape')     close();
   });
 </script>
 
-<!-- Back-to-Top Button -->
-<button id="backToTop" title="Back to Top">Back&nbsp;to&nbsp;Top</button>
+<!-- ───────────────  Back-to-Top Pill  ─────────────── -->
+<button id="backToTop" title="Back to Top">Back&nbsp;to&nbsp;Top&nbsp;&#8679;</button>
 
-<!-- ▸ Scroll-to-Top Logic (auto-detects scroller) -->
 <script>
-  const backToTopBtn = document.getElementById('backToTop');
-
-  /* 🔍 walk up from the gallery and find the first element that scrolls */
-  let scroller = document.documentElement;                         // fallback
-  let probe    = document.querySelector('.photo-grid');            // any deep child
-  while (probe && probe !== document.body) {
+  /* find the element that actually scrolls (window fallback) */
+  const btn      = document.getElementById('backToTop');
+  let   scroller = document.documentElement;
+  let   probe    = document.querySelector('.photo-grid');
+  while (probe && probe !== document.body){
     const ov = getComputedStyle(probe.parentElement).overflowY;
-    if (ov === 'auto' || ov === 'scroll') {
+    if(ov === 'auto' || ov === 'scroll'){
       scroller = probe.parentElement;
       break;
     }
     probe = probe.parentElement;
   }
-
-  /* show / hide button */
-  scroller.addEventListener('scroll', () => {
-    backToTopBtn.style.display = scroller.scrollTop > 300 ? 'block' : 'none';
+  /* toggle visibility */
+  scroller.addEventListener('scroll', ()=>{
+    btn.style.display = scroller.scrollTop > 300 ? 'inline-flex' : 'none';
   });
-
-  /* smooth scroll back to top of the same scroller */
-  backToTopBtn.addEventListener('click', () => {
-    scroller.scrollTo({ top: 0, behavior: 'smooth' });
+  /* smooth scroll */
+  btn.addEventListener('click', ()=> {
+    scroller.scrollTo({top:0, behavior:'smooth'});
   });
 </script>
 
-<!-- ▸ Button Styles -->
+<!-- ───────────────  Page-specific Styles  ─────────────── -->
 <style>
-
-	/* pill, blurred-glass Back-to-Top */
-	#backToTop{
-	  /* visibility & position */
-	  display:none;
-	  position:fixed;
-	  top:20px; left:50%; transform:translateX(-50%);
-	  z-index:1000;
-
-	  /* size & shape */
-	  padding:8px 22px;
-	  border:none;
-	  border-radius:9999px;          /* full pill */
-	  width:auto; height:auto;       /* kill old 48×48 rule */
-
-	  /* look & feel */
-	  font:15px/1.2 system-ui, sans-serif;
-	  color:#fff;
-	  background:rgba(30,30,30,0.35);
-	  backdrop-filter:blur(8px);
-	  cursor:pointer;
-	  opacity:.8;
-	  transition:background .25s, opacity .25s;
-	}
-	#backToTop:hover{
-	  background:rgba(30,30,30,0.55);
-	  opacity:1;
-	}
-
-</style>
-
-
-<!-- Back to Top arrow -->
-<style>
-#backToTop::after{
-  content:"";
-  display:inline-block;
-  margin-left:6px;
-  width:0.5em; height:0.5em;
-  border-right:2px solid currentColor;
-  border-top:2px solid currentColor;
-  transform:rotate(-45deg);
+/* back-to-top pill */
+#backToTop{
+  position:fixed;
+  top:20px; left:50%; transform:translateX(-50%);
+  z-index:1000;
+  padding:8px 22px;
+  display:none;                   /* shown by JS */
+  background:rgba(30,30,30,.35);
+  backdrop-filter:blur(8px);
+  color:#fff; font:15px/1.2 system-ui,sans-serif;
+  border:none; border-radius:9999px;
+  cursor:pointer; opacity:.8;
+  transition:background .25s, opacity .25s;
 }
-</style>
+#backToTop:hover{ background:rgba(30,30,30,.55); opacity:1; }
 
-<style>
-/* ─────────────────────────────────────────────
-   1.  Centre the ← / → arrows on every screen
-───────────────────────────────────────────── */
-.photo-modal .modal-nav span{
-  position:fixed;           /* ignore caption height */
-  top:50%;                  /* middle of viewport   */
-  transform:translateY(-50%);
-  font-size:2.5rem;
-  color:#fff;
-  user-select:none;
-  z-index:2000;
-  padding:.3em .5em;
+/* centre ← / → arrows over the image */
+.photo-modal .prev,
+.photo-modal .next{
+  position:fixed; top:50%; transform:translateY(-50%);
+  font-size:2.5rem; color:#fff; user-select:none; cursor:pointer;
+  z-index:2000; padding:.3em .6em;
 }
 .photo-modal .prev{ left:12px; }
 .photo-modal .next{ right:12px; }
 
-@media (max-width:600px){
-  .photo-modal .modal-nav span{ font-size:3.2rem; } /* bigger thumb-area */
-}
-
-/* ─────────────────────────────────────────────
-   2.  Keep Back-to-Top pill inline on mobile
-───────────────────────────────────────────── */
-#backToTop{
-  display:inline-flex !important;  /* override “block; width:100%” rules */
-  align-items:center;
-  justify-content:center;
-  width:auto !important;
-  height:auto !important;
-  max-width:260px;                 /* safety */
-  white-space:nowrap;              /* stay one line */
-}
-
 @media(max-width:600px){
-  #backToTop{
-    font-size:14px;
-    padding:6px 18px;
-  }
+  #backToTop{ font-size:14px; padding:6px 18px; }
+  .photo-modal .prev,
+  .photo-modal .next{ font-size:3.2rem; }
 }
 </style>
