@@ -4044,28 +4044,25 @@ body.homepage #main {
 }
 
 
-/* ============================
-   Photography tab back to top button
-   ============================ */
 
-#backToTop {
-  position: fixed;
-  bottom: 2em;
-  right: 2em;
-  z-index: 1000;
-  display: none;
-  font-size: 1.5em;
-  background-color: #49bf9d;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: background 0.3s ease;
+/* Center the left/right arrows over the image */
+.photo-modal .modal-nav span{
+  position:absolute;         /* take out of normal flow           */
+  top:50%;                   /* halfway down the viewport         */
+  transform:translateY(-50%);/* perfect vertical centering        */
+  font-size:2.2rem;          /* tweak to taste                    */
+  color:#fff;
+  cursor:pointer;
+  user-select:none;
+  padding:.4em .6em;
+  z-index:2;                 /* above the image                   */
 }
 
-#backToTop:hover {
-  background-color: #3aa988;
+/* keep horizontal placement */
+.photo-modal .prev{ left:10px;  }
+.photo-modal .next{ right:10px; }
+
+/* give thumbs a bigger tap-target on small screens */
+@media (max-width:600px){
+  .photo-modal .modal-nav span{ font-size:3rem; padding:.5em .8em; }
 }
