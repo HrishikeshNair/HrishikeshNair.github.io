@@ -335,3 +335,44 @@ permalink: /photography/
 }
 </style>
 
+<style>
+/* ─────────────────────────────────────────────
+   1.  Centre the ← / → arrows on every screen
+───────────────────────────────────────────── */
+.photo-modal .modal-nav span{
+  position:fixed;           /* ignore caption height */
+  top:50%;                  /* middle of viewport   */
+  transform:translateY(-50%);
+  font-size:2.5rem;
+  color:#fff;
+  user-select:none;
+  z-index:2000;
+  padding:.3em .5em;
+}
+.photo-modal .prev{ left:12px; }
+.photo-modal .next{ right:12px; }
+
+@media (max-width:600px){
+  .photo-modal .modal-nav span{ font-size:3.2rem; } /* bigger thumb-area */
+}
+
+/* ─────────────────────────────────────────────
+   2.  Keep Back-to-Top pill inline on mobile
+───────────────────────────────────────────── */
+#backToTop{
+  display:inline-flex !important;  /* override “block; width:100%” rules */
+  align-items:center;
+  justify-content:center;
+  width:auto !important;
+  height:auto !important;
+  max-width:260px;                 /* safety */
+  white-space:nowrap;              /* stay one line */
+}
+
+@media(max-width:600px){
+  #backToTop{
+    font-size:14px;
+    padding:6px 18px;
+  }
+}
+</style>
