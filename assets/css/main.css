@@ -3895,12 +3895,19 @@ body.homepage #main {
 
 
 .search-wrapper input {
-  width: 100%;
+  flex: 1;
   padding: 0.75em 2.5em 0.75em 1em;
+  border-radius: 8px;
   border: 2px solid #ccc;
-  border-radius: 0.35em;
   font-size: 1em;
+  width: 100%;
+  min-width: 0; /* Prevent overflow */
+  box-sizing: border-box;
+  text-overflow: ellipsis; /* NEW */
+  overflow: hidden;        /* NEW */
+  white-space: nowrap;     /* NEW */
 }
+
 
 .search-wrapper .search-icon {
   position: absolute;
@@ -3972,16 +3979,6 @@ body.homepage #main {
   gap: 0.5em;
 }
 
-.search-wrapper input {
-  flex: 1;
-  padding: 0.75em 2.5em 0.75em 1em;
-  border-radius: 8px;
-  border: 2px solid #ccc;
-  font-size: 1em;
-  width: 100%;
-  min-width: 0; /* Prevent overflow */
-  box-sizing: border-box; /* Ensure padding is included in width */
-}
 
 .search-icon {
   background: none;
