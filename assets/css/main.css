@@ -3884,12 +3884,14 @@ body.homepage #main {
 
 .search-wrapper {
   display: flex;
-  width: min(100%, 400px);
+  width: 100%;
+  max-width: 600px; /* NEW: give it a larger maximum */
   margin: 0 auto;
   position: relative;
   overflow: visible;
   box-sizing: border-box;
 }
+
 
 
 .search-wrapper input {
@@ -4068,22 +4070,3 @@ body.homepage #main {
 }
 
 
-/* ============================
-   Blog Page Layout - fixing placeholder text cut-off for smaller screens
-   ============================ */
-
-/* Fix long placeholder text clipping */
-input::placeholder {
-  font-size: 0.9em;
-  opacity: 0.7;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-/* Special for very small screens */
-@media screen and (max-width: 480px) {
-  input::placeholder {
-    font-size: 0.8em;
-  }
-}
