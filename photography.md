@@ -189,7 +189,7 @@ permalink: /photography/
   </div>
 
   <!-- 30 -->
-  <div class="photo-item" data-title="Watchtower at Dusk" data-description="Eden Beach, Pondicherry. Wasn't that mad that the sun set on the other side once I shot this.<br><i>Pixel 7, black point adjusted Pro</i>">
+  <div class="photo-item" data-title="Watchtower at Dusk" data-description="Eden Beach, Pondicherry. Wasn't that mad that the sun set on the other side once I shot this.<br><i>Pixel 7 Pro, black point adjusted</i>">
     <img src="/images/photography/photo30.jpg" alt="Photo 30" />
     <div class="photo-caption">Watchtower at Dusk</div>
   </div>
@@ -201,7 +201,7 @@ permalink: /photography/
   </div>
   
   <!-- 32 -->
-  <div class="photo-item" data-title="PoV: You own an iPhone" data-description="Excellent crust & overall taste. 23rd Street Pizza, Bangalore.<br><i>Pixel 7, black point adjusted Pro</i>">
+  <div class="photo-item" data-title="PoV: You own an iPhone" data-description="Excellent crust & overall taste. 23rd Street Pizza, Bangalore.<br><i>Pixel 7 Pro</i>">
     <img src="/images/photography/photo32.jpg" alt="Photo 30" />
     <div class="photo-caption">PoV: You own an iPhone</div>
   </div>
