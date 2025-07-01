@@ -194,10 +194,22 @@ permalink: /photography/
     <div class="photo-caption">Watchtower at Dusk</div>
   </div>
   
-    <!-- 31 -->
+   <!-- 31 -->
   <div class="photo-item" data-title="Bangalore Skies" data-description="View from office.<br><i>Pixel 7 Pro</i>">
     <img src="/images/photography/photo31.jpg" alt="Photo 31" />
     <div class="photo-caption">Bangalore Skies</div>
+  </div>
+  
+  <!-- 32 -->
+  <div class="photo-item" data-title="PoV: You own an iPhone" data-description="Excellent crust & overall taste. 23rd Street Pizza, Bangalore.<br><i>Pixel 7, black point adjusted Pro</i>">
+    <img src="/images/photography/photo32.jpg" alt="Photo 30" />
+    <div class="photo-caption">PoV: You own an iPhone</div>
+  </div>
+  
+  <!-- 33 -->
+  <div class="photo-item" data-title="Purple Hour" data-description="Bougainvillea beat the sunset this time ngl.<br><i>Pixel 7 Pro, adjusted for contrast</i>">
+    <img src="/images/photography/photo33.jpg" alt="Photo 31" />
+    <div class="photo-caption">Purple Hour</div>
   </div>
 
 </div>
