@@ -55,7 +55,7 @@ On the other hand, if someone who knows you well found out how long you spent on
 
 <!-- Quote image -->
 <div class="blog-image">
-  <img src="/images/blog/Post2/simpsons_quote.jpg" alt="Simpsons Quote" />
+  <img src="/images/blog/Post2/Simpsons.jpg" alt="The Simpsons" />
 </div>
 
 <hr style="margin: 3em 0;" />
