@@ -33,7 +33,7 @@ permalink: /photography/
   </div>
 
   <!-- 4 -->
-  <div class="photo-item" data-title="Empire State from the Empire State" data-description="One of my favorite sunets.<br><i>Pixel 7 Pro</i>">
+  <div class="photo-item" data-title="Empire State from the Empire State" data-description="One of my favorite sunets.<br><i>Samsung Galaxy M30s</i>">
     <img src="/images/photography/photo4.jpg" alt="Photo 4" />
     <div class="photo-caption">NYC from the Edge</div>
   </div>
@@ -51,7 +51,7 @@ permalink: /photography/
   </div>
 
   <!-- 7 -->
-  <div class="photo-item" data-title="Twilight Hour at Golden Gate" data-description="Arrived at sunset, decided to jog halfway across the bridge (no reason) - the shot was worth it though. #C0362C was apparently chosen to stand out against the San Fransisco Bay.<br><i>Pixel 7 Pro</i>">
+  <div class="photo-item" data-title="Twilight Hour at Golden Gate" data-description="Arrived at sunset, decided to jog halfway across the bridge (no reason) - the shot was worth it though. #C0362C was apparently chosen to stand out against the San Fransisco Bay.<br><i>Samsung Galaxy M30s</i>">
     <img src="/images/photography/photo7.jpg" alt="Photo 7" />
     <div class="photo-caption">Empty Field, Full Sky</div>
   </div>
@@ -75,7 +75,7 @@ permalink: /photography/
   </div>
 
   <!-- 11 -->
-  <div class="photo-item" data-title="Authentic New York Slice" data-description="Little Italy Pizza, bang opposite the Empire State Building.<br><i>Pixel 7 Pro</i>">
+  <div class="photo-item" data-title="Authentic New York Slice" data-description="Little Italy Pizza, bang opposite the Empire State Building.<br><i>Samsung Galaxy M30s</i>">
     <img src="/images/photography/photo11.jpg" alt="Photo 11" />
     <div class="photo-caption">Quick Slice</div>
   </div>
@@ -159,7 +159,7 @@ permalink: /photography/
   </div>
 
   <!-- 25 -->
-  <div class="photo-item" data-title="Under NYC" data-description="Stand clear of the closing doors, please.<br><i>Pixel 7 Pro</i>">
+  <div class="photo-item" data-title="Under NYC" data-description="Stand clear of the closing doors, please.<br><i>Samsung Galaxy M30s</i>">
     <img src="/images/photography/photo25.jpg" alt="Photo 25" />
     <div class="photo-caption">Uptown Exit</div>
   </div>
@@ -189,9 +189,15 @@ permalink: /photography/
   </div>
 
   <!-- 30 -->
-  <div class="photo-item" data-title="Watchtower at Dusk" data-description="Eden Beach, Pondicherry. Wasn't that mad that the sun set on the other side once I shot this.<br><i>Pixel 7 Pro</i>">
+  <div class="photo-item" data-title="Watchtower at Dusk" data-description="Eden Beach, Pondicherry. Wasn't that mad that the sun set on the other side once I shot this.<br><i>Pixel 7, black point adjusted Pro</i>">
     <img src="/images/photography/photo30.jpg" alt="Photo 30" />
     <div class="photo-caption">Watchtower at Dusk</div>
+  </div>
+  
+    <!-- 31 -->
+  <div class="photo-item" data-title="Bangalore Skies" data-description="View from office.<br><i>Pixel 7 Pro</i>">
+    <img src="/images/photography/photo31.jpg" alt="Photo 31" />
+    <div class="photo-caption">Bangalore Skies</div>
   </div>
 
 </div>

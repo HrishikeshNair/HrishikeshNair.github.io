@@ -31,7 +31,7 @@ tags: [technology, privacy, psychology, life]
 
 <p>And what do I mean by this?</p>
 
-<p>To explain, let me talk about the two ways I like to think of <i>‘privacy’</i>:</p>
+<p>To explain, let me talk about the two ways I like to think of ‘privacy’:</p>
 
 <ol>
   <li><strong>Algorithmic privacy: </strong><br />
