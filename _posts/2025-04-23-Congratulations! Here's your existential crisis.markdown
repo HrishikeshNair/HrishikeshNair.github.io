@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Congratulations! Here's your existential crisis"
-permalink: /blog/25042301/
+permalink: /blog/congratulations-heres-your-existential-crisis/
 tags: [psychology, life]
 ---
 

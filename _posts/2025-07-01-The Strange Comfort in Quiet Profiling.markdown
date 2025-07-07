@@ -1,8 +1,8 @@
 ---
 layout: default
 title: "The Strange Comfort in Quiet Profiling"
-permalink: /blog/25070101/
-tags: [technology, privacy, psychology, life]
+permalink: /blog/the-strange-comfort-in-quiet-profiling/
+tags: [technology, psychology, life]
 ---
 
 <!-- Back Button (Top Left) -->
@@ -34,10 +34,10 @@ tags: [technology, privacy, psychology, life]
 <p>To explain, let me talk about the two ways I like to think of ‘privacy’:</p>
 
 <ol>
-  <li><strong>Algorithmic privacy: </strong><br />
+  <li><strong>Algorithmic privacy </strong><br />
   This is the privacy that we’re trained to care about. Your data scraped and sold by millions of corporations every second you use your phone.
   </li>
-  <li><strong>Social privacy: </strong><br />
+  <li><strong>Social privacy </strong><br />
   The privacy we guard from friends, neighbors, relatives. The one you try to keep out of gossip and judgement. This is less about data and more about perception, less about what's collected and more about who sees it.
   </li>
 </ol>
