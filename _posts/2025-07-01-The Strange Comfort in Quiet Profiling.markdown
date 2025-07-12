@@ -2,7 +2,7 @@
 layout: default
 title: "The Strange Comfort in Quiet Profiling"
 permalink: /blog/the-strange-comfort-in-quiet-profiling/
-tags: [technology, psychology]
+tags: [technology, psychology, life]
 ---
 
 <!-- Back Button (Top Left) -->
